@@ -7,7 +7,7 @@ import model.JobOffer;
 import java.util.List;
 
 public interface CompanyDAO {
-    Company getCompanyByName(String name);
+    Company getCompanyByName(String companyName);
     List<Candidature> getCandidaturesByJobOffer(Company co, JobOffer jo);
     void updateCompany(Company co);
     List<JobOffer>getJobOffers(Company co);
