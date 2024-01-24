@@ -1,10 +1,12 @@
 package dao;
 
 import Utils.HibernateUtil;
-import model.User;
+import model.*;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import java.util.List;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -36,5 +38,50 @@ public class UserImplDAO implements UserDAO {
     public void addSkill(String skillName) {
 
     }
-    
+
+    @Override
+    public List<AcademicInfo> getUserAcademicInfo(User u) {
+        return null;
+    }
+
+    @Override
+    public void removeUser(User u) {
+
+    }
+
+    @Override
+    public User getUser(int id) {
+        return null;
+    }
+
+    @Override
+    public List<Skills> getUserSkills(User u) {
+        return null;
+    }
+
+    @Override
+    public List<Candidatures> getUserCandidatures(User u) {
+        return null;
+    }
+
+    @Override
+    public List<User> getUsersByName(String name) {
+        return null;
+    }
+
+    @Override
+    public void updateUser(User u) {
+
+    }
+
+    @Override
+    public List<LaboralExperiences> getUserLaboralExperience(User u) {
+        return null;
+    }
+
+    @Override
+    public User getUserByName(String name) {
+        return null;
+    }
+
 }

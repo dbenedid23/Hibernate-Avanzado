@@ -4,22 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7712652-d249-4ebb-b96d-605fa1c926de" name="Changes" comment="initial commit">
+    <list default="true" id="d7712652-d249-4ebb-b96d-605fa1c926de" name="Changes" comment="nuevos model">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/CompanyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/JobOfferService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CompanyDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CompanyImplDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/JobOfferDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/JobOfferImplDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserImplDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserImplDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/AcademicInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/AcademicInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Candidatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Candidatures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Companies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Companies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Institutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Institutions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/JobOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/JobOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/LaboralExperiences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/LaboralExperiences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Skills.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Skills.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2bMujzdzE6Edx1w8ZNOFU3ykZVW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -28,19 +50,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.HibernateAvanzado [clean].executor": "Run",
-    "Maven.HibernateAvanzado [deploy].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/dev/NetBeansProjects/HibernateAvanzado/src/main/java",
-    "settings.editor.selected.configurable": "build.tools"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.HibernateAvanzado [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.HibernateAvanzado [deploy].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/dev/NetBeansProjects/HibernateAvanzado/src/main/java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
@@ -79,11 +101,56 @@
       <option name="project" value="LOCAL" />
       <updated>1706037731190</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1706038929640</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706038929640</updated>
+    </task>
+    <task id="LOCAL-00004" summary="borrado de catch">
+      <option name="closed" value="true" />
+      <created>1706038983585</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706038983585</updated>
+    </task>
+    <task id="LOCAL-00005" summary="borrado de catch">
+      <option name="closed" value="true" />
+      <created>1706039027956</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706039027956</updated>
+    </task>
+    <task id="LOCAL-00006" summary="nuevos model">
+      <option name="closed" value="true" />
+      <created>1706039425279</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706039425279</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="borrado de catch" />
+    <MESSAGE value="nuevos model" />
+    <option name="LAST_COMMIT_MESSAGE" value="nuevos model" />
   </component>
 </project>
