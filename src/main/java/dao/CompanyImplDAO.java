@@ -1,44 +1,44 @@
 package dao;
 
-import model.Candidatures;
-import model.Companies;
+import model.Candidature;
+import model.Company;
 import model.JobOffer;
 
 import java.util.List;
 
 public class CompanyImplDAO implements CompanyDAO{
     @Override
-    public Companies getCompanyByName(String name) {
+    public Company getCompanyByName(String name) {
         return null;
     }
 
     @Override
-    public List<Candidatures> getCandidaturesByJobOffer(Companies co, JobOffer jo) {
+    public List<Candidature> getCandidaturesByJobOffer(Company co, JobOffer jo) {
         return null;
     }
 
     @Override
-    public void updateCompany(Companies co) {
+    public void updateCompany(Company co) {
 
     }
 
     @Override
-    public List<JobOffer> getJobOffers(Companies co) {
+    public List<JobOffer> getJobOffers(Company co) {
         return null;
     }
 
     @Override
-    public void removeCompany(Companies co) {
+    public void removeCompany(Company co) {
 
     }
 
     @Override
-    public void createCompany(Companies co) {
+    public void createCompany(Company co) {
 
     }
 
     @Override
-    public Companies getCompany(int id) {
+    public Company getCompany(int id) {
         return null;
     }
 }

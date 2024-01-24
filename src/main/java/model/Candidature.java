@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "Candidature")
-public class Candidatures {
+public class Candidature {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,10 +27,10 @@ public class Candidatures {
     @OneToOne
     @JoinColumn(name = "jobOffer_id")
     private JobOffer jobOffer;
-    public Candidatures() {
+    public Candidature() {
     }
 
-    public Candidatures(int id, String name, String description, int status, String coverLetterPath) {
+    public Candidature(int id, String name, String description, int status, String coverLetterPath) {
         this.id = id;
         this.name = name;
         this.description = description;

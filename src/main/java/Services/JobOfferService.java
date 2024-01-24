@@ -1,7 +1,6 @@
 package Services;
-import dao.JobOfferImplDAO;
-import model.Candidatures;
-import model.Companies;
+import model.Candidature;
+import model.Company;
 import model.JobOffer;
 
 import java.util.List;
@@ -13,10 +12,10 @@ public class JobOfferService {
     public void removeJobOffer(JobOffer job){
 
     }
-    public JobOffer createJobOffer(String name, Companies co){
+    public JobOffer createJobOffer(String name, Company co){
         return null;
     }
-    public List<Candidatures> getCandidaturesJobOffers(JobOffer job){
+    public List<Candidature> getCandidaturesJobOffers(JobOffer job){
         return null;
     }
     public void createJobOffer(JobOffer jo){

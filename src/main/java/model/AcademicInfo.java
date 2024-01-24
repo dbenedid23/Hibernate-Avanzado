@@ -1,7 +1,6 @@
 package model;
 
 import jakarta.persistence.*;
-import org.checkerframework.checker.nullness.qual.Nullable;
 
 @Entity
 @Table(name = "InfoAcademica")
@@ -24,7 +23,7 @@ public class AcademicInfo {
     private User user;
     @ManyToOne
     @JoinColumn(name = "institution_id")
-    private Institutions institution;
+    private Institution institution;
 
 
     public AcademicInfo(int id, String tittle, int initialDate, int endDate, String current, String meanScore) {

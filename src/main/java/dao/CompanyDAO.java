@@ -1,17 +1,18 @@
 package dao;
 
-import model.Candidatures;
-import model.Companies;
+import model.Candidature;
+import model.Company;
 import model.JobOffer;
 
 import java.util.List;
 
 public interface CompanyDAO {
-    Companies getCompanyByName(String name);
-    List<Candidatures> getCandidaturesByJobOffer(Companies co, JobOffer jo);
-    void updateCompany(Companies co);
-    List<JobOffer>getJobOffers(Companies co);
-    void removeCompany(Companies co);
-    void createCompany(Companies co);
-    Companies getCompany(int id);
+    Company getCompanyByName(String name);
+    List<Candidature> getCandidaturesByJobOffer(Company co, JobOffer jo);
+    void updateCompany(Company co);
+    List<JobOffer>getJobOffers(Company co);
+    void removeCompany(Company co);
+    void createCompany(Company co);
+    Company getCompany(int id);
+    //
 }

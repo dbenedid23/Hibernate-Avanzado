@@ -55,12 +55,12 @@ public class UserImplDAO implements UserDAO {
     }
 
     @Override
-    public List<Skills> getUserSkills(User u) {
+    public List<Skill> getUserSkills(User u) {
         return null;
     }
 
     @Override
-    public List<Candidatures> getUserCandidatures(User u) {
+    public List<Candidature> getUserCandidatures(User u) {
         return null;
     }
 
@@ -75,7 +75,7 @@ public class UserImplDAO implements UserDAO {
     }
 
     @Override
-    public List<LaboralExperiences> getUserLaboralExperience(User u) {
+    public List<LaboralExperience> getUserLaboralExperience(User u) {
         return null;
     }
 

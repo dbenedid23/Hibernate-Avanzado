@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 @Entity
 @Table(name = "Institucion")
-public class Institutions {
+public class Institution {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int id;
@@ -16,10 +16,10 @@ public class Institutions {
     @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
 
     private List<AcademicInfo> aca;
-    public Institutions() {
+    public Institution() {
     }
 
-    public Institutions(int id, String name) {
+    public Institution(int id, String name) {
         this.id = id;
         this.name = name;
     }

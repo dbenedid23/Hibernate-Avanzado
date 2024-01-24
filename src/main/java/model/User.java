@@ -16,8 +16,8 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 public class User {
-    @ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
-    private List<Skills> skills;
+    @ManyToMany(mappedBy = "users", fetch = FetchType.LAZY)
+    private List<Skill> skills;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -36,9 +36,9 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<AcademicInfo> academicInfos;
     @OneToMany(mappedBy = "user")
-    private List<Candidatures> candidatures;
+    private List<Candidature> candidatures;
     @OneToMany(mappedBy = "user")
-    private List<LaboralExperiences> laboralExperiences;
+    private List<LaboralExperience> laboralExperiences;
     public User() {
     }
 

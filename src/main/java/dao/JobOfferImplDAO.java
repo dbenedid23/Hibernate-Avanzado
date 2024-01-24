@@ -1,9 +1,9 @@
 package dao;
 
-import model.Candidatures;
-import model.Companies;
+import model.Candidature;
+import model.Company;
 import model.JobOffer;
-import model.Skills;
+import model.Skill;
 
 import java.util.List;
 
@@ -34,7 +34,7 @@ public class JobOfferImplDAO implements JobOfferDAO{
     }
 
     @Override
-    public List<Candidatures> getJobOfferCandidatures(JobOffer jo) {
+    public List<Candidature> getJobOfferCandidatures(JobOffer jo) {
         return null;
     }
 
@@ -44,7 +44,7 @@ public class JobOfferImplDAO implements JobOfferDAO{
     }
 
     @Override
-    public List<JobOffer> getJobOffersBySkill(Skills ski) {
+    public List<JobOffer> getJobOffersBySkill(Skill ski) {
         return null;
     }
 
@@ -64,7 +64,7 @@ public class JobOfferImplDAO implements JobOfferDAO{
     }
 
     @Override
-    public List<JobOffer> getJobOffersByCompany(Companies co) {
+    public List<JobOffer> getJobOffersByCompany(Company co) {
         return null;
     }
 }

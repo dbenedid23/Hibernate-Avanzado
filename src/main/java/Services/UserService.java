@@ -21,7 +21,7 @@ public class UserService {
             e.printStackTrace();
         }
     }
-    public void addJobExperience(User user, LaboralExperiences lab, Companies co){
+    public void addJobExperience(User user, LaboralExperience lab, Company co){
 
     }
     public void addSkill(User user, String name) {
@@ -33,19 +33,19 @@ public class UserService {
     public void addAcademicInfo(User user, AcademicInfo aca){
 
     }
-    public void addCandidature(User user, Candidatures ca, JobOffer job){
+    public void addCandidature(User user, Candidature ca, JobOffer job){
 
     }
-    public void addCandidature(User user, Candidatures ca) {
+    public void addCandidature(User user, Candidature ca) {
 
     }
-    public void addSkill(User user, Skills skill){
+    public void addSkill(User user, Skill skill){
 
     }
-    public void addJobExperience(User user, LaboralExperiences lab) {
+    public void addJobExperience(User user, LaboralExperience lab) {
 
     }
-    public void addAcademicInfo(User user, AcademicInfo aca, Institutions ins) {
+    public void addAcademicInfo(User user, AcademicInfo aca, Institution ins) {
 
     }
     public void addCandidature(User user, JobOffer job, String name, String nameCandidature) {

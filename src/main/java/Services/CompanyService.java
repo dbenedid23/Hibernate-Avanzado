@@ -1,26 +1,25 @@
 package Services;
-import dao.CompanyImplDAO;
-import model.Companies;
+import model.Company;
 import model.JobOffer;
 
 public class CompanyService {
-    public void createCompany(Companies co){
+    public void createCompany(Company co){
 
     }
-    public void removeCompany(Companies co){
+    public void removeCompany(Company co){
 
     }
-    public Companies createCompany(String name){
+    public Company createCompany(String name){
 
         return null;
     }
-    public void printCompanyInfo(Companies co){
+    public void printCompanyInfo(Company co){
 
     }
-    public Companies createCompany(String name, String description){
+    public Company createCompany(String name, String description){
         return null;
     }
-    public void addJobOffer(Companies co, JobOffer job){
+    public void addJobOffer(Company co, JobOffer job){
 
     }
 }

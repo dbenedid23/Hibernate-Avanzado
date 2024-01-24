@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "Compañia")
-public class Companies {
+public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -17,9 +17,9 @@ public class Companies {
     @OneToMany (mappedBy = "company")
     private List<JobOffer>jobOffers;
     @OneToMany (mappedBy = "company")
-    private List<LaboralExperiences> laboralExperiences;
+    private List<LaboralExperience> laboralExperiences;
 
-    public Companies() {
+    public Company() {
     }
 
     public int getId() {
@@ -46,7 +46,7 @@ public class Companies {
         this.description = description;
     }
 
-    public Companies(int id, String name, String description) {
+    public Company(int id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;

@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7712652-d249-4ebb-b96d-605fa1c926de" name="Changes" comment="Modo private">
+    <list default="true" id="d7712652-d249-4ebb-b96d-605fa1c926de" name="Changes" comment="Creando metodos en Service">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/CompanyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/JobOfferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/JobOfferService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CompanyDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CompanyDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CompanyImplDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CompanyImplDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JobOfferDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/JobOfferDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/JobOfferImplDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/JobOfferImplDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserImplDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserImplDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/AcademicInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/AcademicInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Candidatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Candidature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Companies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Institutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Institution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/JobOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/JobOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/LaboralExperiences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/LaboralExperience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Skills.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Skill.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706131116991</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Creando metodos en Service">
+      <option name="closed" value="true" />
+      <created>1706132708654</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706132708654</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +179,7 @@
     <MESSAGE value="nuevos model" />
     <MESSAGE value="Cambios en el model y actualizacion de DAO and Service" />
     <MESSAGE value="Modo private" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modo private" />
+    <MESSAGE value="Creando metodos en Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creando metodos en Service" />
   </component>
 </project>

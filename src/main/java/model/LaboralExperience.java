@@ -2,7 +2,7 @@ package model;
 
 import jakarta.persistence.*;
 
-public class LaboralExperiences {
+public class LaboralExperience {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -10,25 +10,25 @@ public class LaboralExperiences {
     private String jobTittle;
     @Column(name = "localización")
     private String location;
-    @Column(name = "Titulo_trabajo")
+    @Column(name = "actual")
     private boolean current;
-    @Column(name = "Titulo_trabajo")
+    @Column(name = "descripcion")
     private String description;
-    @Column(name = "Titulo_trabajo")
+    @Column(name = "fechaInicial")
     private int initDate;
-    @Column(name = "Titulo_trabajo")
+    @Column(name = "FechaFin")
     private int endDate;
     @OneToOne
     @JoinColumn(name = "company_id")
-    private Companies company;
+    private Company company;
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
-    public LaboralExperiences() {
+    public LaboralExperience() {
     }
 
-    public LaboralExperiences(int id, String jobTittle, String location, boolean current, String description, int initDate, int endDate) {
+    public LaboralExperience(int id, String jobTittle, String location, boolean current, String description, int initDate, int endDate) {
         this.id = id;
         this.jobTittle = jobTittle;
         this.location = location;

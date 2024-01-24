@@ -10,23 +10,30 @@ public class JobOffer {
     private int id;
     @Column(name = "titulo", nullable = false)
     private String title;
-    @Column(name = "nombre")
+    @Column(name = "salarioMax")
     private int maxSalary;
-    @Column(name = "nombre")
+    @Column(name = "detalles")
     private String details;
-    @Column(name = "nombre", nullable = false)
+    @Column(name = "abierto", nullable = false)
     private boolean open;
-    @Column(name = "nombre", nullable = false)
+    @Column(name = "location", nullable = false)
     private String location;
-    @Column(name = "nombre")
+    @Column(name = "requerimientos")
     private int requiredCandidates;
-    @Column(name = "nombre")
+    @Column(name = "slarioMin")
     private int minSalary;
     @OneToOne
     @JoinColumn(name = "company_id")
-    private Companies company;
+    private Company company;
     @OneToOne(mappedBy = "jobOffer")
     private List<JobOffer> jobOffers;
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+            name = "JobOffer skill",
+            joinColumns = @JoinColumn(name = "JobOffer_id"),
+            inverseJoinColumns = @JoinColumn(name = "skill_id")
+    )
+    private List<Skill> skill;
     public JobOffer() {
     }
 

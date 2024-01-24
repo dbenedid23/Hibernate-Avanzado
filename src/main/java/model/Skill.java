@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "skills")
-public class Skills {
+public class Skill {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -27,6 +27,8 @@ public class Skills {
             inverseJoinColumns = @JoinColumn(name = "user_id")
         )
         private List<User> users;
+    @ManyToMany(mappedBy = "skill", fetch = FetchType.LAZY)
+    private List<JobOffer> jobOffer;
 
     public int getId() {
         return id;
@@ -44,10 +46,10 @@ public class Skills {
         this.nombre = nombre;
     }
 
-    public Skills() {
+    public Skill() {
     }
 
-    public Skills(int id, String nombre) {
+    public Skill(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }
