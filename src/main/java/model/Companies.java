@@ -9,15 +9,15 @@ import java.util.List;
 public class Companies {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    private int id;
     @Column(name = "nombre", nullable = false, unique = true)
-    String name;
+    private String name;
     @Column(name = "descripcion")
-    String description;
+    private String description;
     @OneToMany (mappedBy = "company")
-    List<JobOffer>jobOffers;
+    private List<JobOffer>jobOffers;
     @OneToMany (mappedBy = "company")
-    List<LaboralExperiences> laboralExperiences;
+    private List<LaboralExperiences> laboralExperiences;
 
     public Companies() {
     }

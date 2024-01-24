@@ -26,19 +26,19 @@ public class User {
     private String nombre;
 
     @Column(name = "descripcion")
-    String description;
+    private String description;
 
     @Column(name = "telefono", nullable = false)
-    int telephone;
+    private int telephone;
 
     @Column(name = "e-mail", nullable = false)
-    String mail;
+    private String mail;
     @OneToMany(mappedBy = "user")
-    List<AcademicInfo> academicInfos;
+    private List<AcademicInfo> academicInfos;
     @OneToMany(mappedBy = "user")
-    List<Candidatures> candidatures;
+    private List<Candidatures> candidatures;
     @OneToMany(mappedBy = "user")
-    List<LaboralExperiences> laboralExperiences;
+    private List<LaboralExperiences> laboralExperiences;
     public User() {
     }
 

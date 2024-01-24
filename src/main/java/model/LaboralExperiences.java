@@ -5,19 +5,19 @@ import jakarta.persistence.*;
 public class LaboralExperiences {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    private int id;
     @Column(name = "Titulo_trabajo", nullable = false)
-    String jobTittle;
+    private String jobTittle;
     @Column(name = "localización")
-    String location;
+    private String location;
     @Column(name = "Titulo_trabajo")
-    boolean current;
+    private boolean current;
     @Column(name = "Titulo_trabajo")
-    String description;
+    private String description;
     @Column(name = "Titulo_trabajo")
-    int initDate;
+    private int initDate;
     @Column(name = "Titulo_trabajo")
-    int endDate;
+    private int endDate;
     @OneToOne
     @JoinColumn(name = "company_id")
     private Companies company;

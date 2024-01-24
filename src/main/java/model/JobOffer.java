@@ -2,30 +2,31 @@ package model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 public class JobOffer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    private int id;
     @Column(name = "titulo", nullable = false)
-    String title;
+    private String title;
     @Column(name = "nombre")
-    int maxSalary;
+    private int maxSalary;
     @Column(name = "nombre")
-    String details;
+    private String details;
     @Column(name = "nombre", nullable = false)
-    boolean open;
+    private boolean open;
     @Column(name = "nombre", nullable = false)
-    String location;
+    private String location;
     @Column(name = "nombre")
-    int requiredCandidates;
+    private int requiredCandidates;
     @Column(name = "nombre")
-    int minSalary;
+    private int minSalary;
     @OneToOne
     @JoinColumn(name = "company_id")
     private Companies company;
-    @OneToOne
-    @JoinColumn(name = "candidatures_id")
-    private Candidatures candidatures;
+    @OneToOne(mappedBy = "jobOffer")
+    private List<JobOffer> jobOffers;
     public JobOffer() {
     }
 

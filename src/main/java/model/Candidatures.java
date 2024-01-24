@@ -12,18 +12,21 @@ public class Candidatures {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(name = "nombre", nullable = false, unique = true)
-    String name;
+    private String name;
     @Column(name = "Descripción")
-    String description;
+    private String description;
     @Column(name = "Estado")
-    int Status;
+    private int Status;
     @Column(name = "CoverLetter")
-    String coverLetterPath;
+    private String coverLetterPath;
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
     @OneToOne(mappedBy = "company")
-    List<JobOffer> jobOffers;
+    private List<JobOffer> jobOffers;
+    @OneToOne
+    @JoinColumn(name = "jobOffer_id")
+    private JobOffer jobOffer;
     public Candidatures() {
     }
 

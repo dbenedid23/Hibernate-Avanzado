@@ -8,17 +8,17 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 public class AcademicInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    private int id;
     @Column(name = "titulo", nullable = false)
-    String tittle;
+    private String tittle;
     @Column(name = "Fecha Inicial")
-    int initialDate;
+    private int initialDate;
     @Column(name = "Fecha fin")
-    int endDate;
+    private int endDate;
     @Column(name = "current")
-    String current;
+    private String current;
     @Column(name = "mean_score")
-    String meanScore;
+    private String meanScore;
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

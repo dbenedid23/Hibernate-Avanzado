@@ -8,11 +8,11 @@ import java.util.List;
 public class Institutions {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    private  int id;
     @Column(name = "nombre" , nullable = false, unique = true)
-    String name;
+    private String name;
     @OneToMany(mappedBy = "institution")
-    List<AcademicInfo> academicInfos;
+    private List<AcademicInfo> academicInfos;
     @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
 
     private List<AcademicInfo> aca;
