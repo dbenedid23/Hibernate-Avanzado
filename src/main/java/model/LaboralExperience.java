@@ -18,7 +18,7 @@ public class LaboralExperience {
     private int initDate;
     @Column(name = "FechaFin")
     private int endDate;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "company_id")
     private Company company;
     @ManyToOne

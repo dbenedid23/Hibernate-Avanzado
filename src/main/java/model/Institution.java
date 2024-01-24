@@ -13,9 +13,7 @@ public class Institution {
     private String name;
     @OneToMany(mappedBy = "institution")
     private List<AcademicInfo> academicInfos;
-    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
 
-    private List<AcademicInfo> aca;
     public Institution() {
     }
 

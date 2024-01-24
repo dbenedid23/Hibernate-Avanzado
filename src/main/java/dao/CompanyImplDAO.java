@@ -32,7 +32,7 @@ public class CompanyImplDAO implements CompanyDAO{
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<Candidature> query = cb.createQuery(Candidature.class);
             Root<Candidature> root = query.from(Candidature.class);
-            Join<Candidature, Company> candidatureCompanyJoin = root.join("");
+            Join<Candidature, Company> candidatureCompanyJoin = root.join("jobOffers");
             query.where(cb.equal(root.get("name"), jo));
             return session.createQuery(query).getResultList();
         } catch (Exception e) {
@@ -64,7 +64,8 @@ public class CompanyImplDAO implements CompanyDAO{
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<JobOffer> cr = cb.createQuery(JobOffer.class);
             Root<JobOffer> root = cr.from(JobOffer.class);
-            cr.select(root);
+            Join<JobOffer, Company> jobOfferJoin = root.join("company");
+            cr.where(cb.equal(root.get("name"), co));
             return session.createQuery(cr).getResultList();
         } catch (HibernateException hibernateException){
             System.err.println(hibernateException.getMessage());

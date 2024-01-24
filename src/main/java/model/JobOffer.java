@@ -20,13 +20,16 @@ public class JobOffer {
     private String location;
     @Column(name = "requerimientos")
     private int requiredCandidates;
-    @Column(name = "slarioMin")
+    @Column(name = "salarioMin")
     private int minSalary;
-    @OneToOne
+    @Column(name = "diaDeTrabajo")
+    private int workDayType;
+    @ManyToOne
     @JoinColumn(name = "company_id")
     private Company company;
-    @OneToOne(mappedBy = "jobOffer")
-    private List<JobOffer> jobOffers;
+    @ManyToOne
+    @JoinColumn(name = "candidature_id")
+    private Candidature candidature;
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "JobOffer skill",
@@ -35,6 +38,14 @@ public class JobOffer {
     )
     private List<Skill> skill;
     public JobOffer() {
+    }
+
+    public int getWorkDayType() {
+        return workDayType;
+    }
+
+    public void setWorkDayType(int workDayType) {
+        this.workDayType = workDayType;
     }
 
     public int getId() {
@@ -101,7 +112,7 @@ public class JobOffer {
         this.minSalary = minSalary;
     }
 
-    public JobOffer(int id, String title, int maxSalary, String details, boolean open, String location, int requiredCandidates, int minSalary) {
+    public JobOffer(int id, String title, int maxSalary, String details, boolean open, String location, int requiredCandidates, int minSalary, int WorkDayType) {
         this.id = id;
         this.title = title;
         this.maxSalary = maxSalary;
@@ -110,6 +121,7 @@ public class JobOffer {
         this.location = location;
         this.requiredCandidates = requiredCandidates;
         this.minSalary = minSalary;
+        this.workDayType = WorkDayType;
     }
 
 

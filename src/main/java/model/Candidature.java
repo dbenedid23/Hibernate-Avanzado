@@ -22,11 +22,9 @@ public class Candidature {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
-    @OneToOne(mappedBy = "company")
+    @OneToMany(mappedBy = "jobOffer_id")
     private List<JobOffer> jobOffers;
-    @OneToOne
-    @JoinColumn(name = "jobOffer_id")
-    private JobOffer jobOffer;
+
     public Candidature() {
     }
 
