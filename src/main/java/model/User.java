@@ -6,6 +6,7 @@ package model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -34,16 +35,16 @@ public class User {
     @Column(name = "e-mail", nullable = false)
     private String mail;
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<AcademicInfo> academicInfos;
+    private List<AcademicInfo> academicInfos = new ArrayList<>();
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Candidature> candidatures;
+    private List<Candidature> candidatures = new ArrayList<>();
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<LaboralExperience> laboralExperiences;
+    private List<LaboralExperience> laboralExperiences = new ArrayList<>();
     public User() {
     }
 
-    public User(int id, String nombre, String description, int telephone, String mail) {
-        this.id = id;
+    public User(String nombre, String description, int telephone, String mail) {
+
         this.nombre = nombre;
         this.description = description;
         this.telephone = telephone;

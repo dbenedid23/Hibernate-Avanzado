@@ -29,8 +29,8 @@ public class LaboralExperience {
     public LaboralExperience() {
     }
 
-    public LaboralExperience(int id, String jobTittle, String location, boolean current, String description, int initDate, int endDate) {
-        this.id = id;
+    public LaboralExperience(String jobTittle, String location, boolean current, String description, int initDate, int endDate) {
+
         this.jobTittle = jobTittle;
         this.location = location;
         this.current = current;

@@ -26,8 +26,7 @@ public class AcademicInfo {
     private Institution institution;
 
 
-    public AcademicInfo(int id, String tittle, int initialDate, int endDate, String current, String meanScore) {
-        this.id = id;
+    public AcademicInfo(String tittle, int initialDate, int endDate, String current, String meanScore) {
         this.tittle = tittle;
         this.initialDate = initialDate;
         this.endDate = endDate;

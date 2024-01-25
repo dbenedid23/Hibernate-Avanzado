@@ -2,6 +2,7 @@ package model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,9 +16,9 @@ public class Company {
     @Column(name = "descripcion")
     private String description;
     @OneToMany (mappedBy = "company", cascade = CascadeType.ALL)
-    private List<JobOffer>jobOffers;
+    private List<JobOffer>jobOffers = new ArrayList<>();
     @OneToMany (mappedBy = "company", cascade = CascadeType.ALL)
-    private List<LaboralExperience> laboralExperiences;
+    private List<LaboralExperience> laboralExperiences = new ArrayList<>();
 
     public Company() {
     }
@@ -62,8 +63,8 @@ public class Company {
         this.description = description;
     }
 
-    public Company(int id, String name, String description) {
-        this.id = id;
+    public Company(String name, String description) {
+
         this.name = name;
         this.description = description;
     }

@@ -2,6 +2,7 @@ package model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 @Entity
 @Table(name = "Institucion")
@@ -12,13 +13,13 @@ public class Institution {
     @Column(name = "nombre" , nullable = false, unique = true)
     private String name;
     @OneToMany(mappedBy = "institution", cascade = CascadeType.ALL)
-    private List<AcademicInfo> academicInfos;
+    private List<AcademicInfo> academicInfos = new ArrayList<>();
 
     public Institution() {
     }
 
-    public Institution(int id, String name) {
-        this.id = id;
+    public Institution(String name) {
+
         this.name = name;
     }
 

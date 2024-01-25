@@ -6,6 +6,7 @@ package model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,7 +29,7 @@ public class Skill {
         )
         private List<User> users;
     @ManyToMany(mappedBy = "skill", fetch = FetchType.LAZY)
-    private List<JobOffer> jobOffer;
+    private List<JobOffer> jobOffer = new ArrayList<>();
 
     public List<User> getUsers() {
         return users;
@@ -64,10 +65,7 @@ public class Skill {
 
 
 
-    public Skill(int id, String nombre) {
-        this.id = id;
-        this.nombre = nombre;
-    }
+
 
     public Skill(String nombre) {
         this.nombre = nombre;

@@ -2,6 +2,7 @@ package model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 @Entity
 @Table(name = "JobOffers")
@@ -29,7 +30,7 @@ public class JobOffer {
     @JoinColumn(name = "company_id")
     private Company company;
     @OneToMany(mappedBy = "jobOffers", cascade = CascadeType.ALL)
-    private List<Candidature> candidature;
+    private List<Candidature> candidature = new ArrayList<>();
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "JobOffer skill",
@@ -136,8 +137,8 @@ public class JobOffer {
         this.minSalary = minSalary;
     }
 
-    public JobOffer(int id, String title, int maxSalary, String details, boolean open, String location, int requiredCandidates, int minSalary, int WorkDayType) {
-        this.id = id;
+    public JobOffer(String title, int maxSalary, String details, boolean open, String location, int requiredCandidates, int minSalary, int WorkDayType) {
+
         this.title = title;
         this.maxSalary = maxSalary;
         this.details = details;

@@ -29,8 +29,8 @@ public class Candidature {
     public Candidature() {
     }
 
-    public Candidature(int id, String name, String description, int status, String coverLetterPath) {
-        this.id = id;
+    public Candidature(String name, String description, int status, String coverLetterPath) {
+
         this.name = name;
         this.description = description;
         Status = status;
