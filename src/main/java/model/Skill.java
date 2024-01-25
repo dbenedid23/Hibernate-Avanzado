@@ -30,6 +30,22 @@ public class Skill {
     @ManyToMany(mappedBy = "skill", fetch = FetchType.LAZY)
     private List<JobOffer> jobOffer;
 
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
+    public List<JobOffer> getJobOffer() {
+        return jobOffer;
+    }
+
+    public void setJobOffer(List<JobOffer> jobOffer) {
+        this.jobOffer = jobOffer;
+    }
+
     public int getId() {
         return id;
     }

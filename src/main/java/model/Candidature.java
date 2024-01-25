@@ -22,8 +22,11 @@ public class Candidature {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
-    @OneToMany(mappedBy = "jobOffer_id")
-    private List<JobOffer> jobOffers;
+
+
+    @ManyToOne
+    @JoinColumn(name = "jobOffers_id")
+    private JobOffer jobOffers;
 
     public Candidature() {
     }
@@ -34,6 +37,22 @@ public class Candidature {
         this.description = description;
         Status = status;
         this.coverLetterPath = coverLetterPath;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public JobOffer getJobOffers() {
+        return jobOffers;
+    }
+
+    public void setJobOffers(JobOffer jobOffers) {
+        this.jobOffers = jobOffers;
     }
 
     public int getId() {

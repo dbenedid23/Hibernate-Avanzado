@@ -22,6 +22,14 @@ public class Institution {
         this.name = name;
     }
 
+    public List<AcademicInfo> getAcademicInfos() {
+        return academicInfos;
+    }
+
+    public void setAcademicInfos(List<AcademicInfo> academicInfos) {
+        this.academicInfos = academicInfos;
+    }
+
     public int getId() {
         return id;
     }

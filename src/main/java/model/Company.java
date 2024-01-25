@@ -22,6 +22,22 @@ public class Company {
     public Company() {
     }
 
+    public List<JobOffer> getJobOffers() {
+        return jobOffers;
+    }
+
+    public void setJobOffers(List<JobOffer> jobOffers) {
+        this.jobOffers = jobOffers;
+    }
+
+    public List<LaboralExperience> getLaboralExperiences() {
+        return laboralExperiences;
+    }
+
+    public void setLaboralExperiences(List<LaboralExperience> laboralExperiences) {
+        this.laboralExperiences = laboralExperiences;
+    }
+
     public int getId() {
         return id;
     }

@@ -60,7 +60,7 @@ public class UserImplDAO implements UserDAO {
             CriteriaQuery<AcademicInfo> cr = cb.createQuery(AcademicInfo.class);
             Root<AcademicInfo> root = cr.from(AcademicInfo.class);
             Join<AcademicInfo, User> academicInfoUserJoin = root.join("user");
-            cr.where(cb.equal(root.get("name"), u));
+            cr.where(cb.equal(root, u));
             return session.createQuery(cr).getResultList();
         } catch (HibernateException hibernateException){
             System.err.println(hibernateException.getMessage());
@@ -107,7 +107,7 @@ public class UserImplDAO implements UserDAO {
             CriteriaQuery<Skill> cr = cb.createQuery(Skill.class);
             Root<Skill> root = cr.from(Skill.class);
             Join<Skill, User> academicInfoUserJoin = root.join("users");
-            cr.where(cb.equal(root.get("name"), u));
+            cr.where(cb.equal(root, u));
             return session.createQuery(cr).getResultList();
         } catch (HibernateException hibernateException){
             System.err.println(hibernateException.getMessage());
@@ -122,7 +122,7 @@ public class UserImplDAO implements UserDAO {
             CriteriaQuery<Candidature> cr = cb.createQuery(Candidature.class);
             Root<Candidature> root = cr.from(Candidature.class);
             Join<Candidature, User> academicInfoUserJoin = root.join("candidatures");//Preguntar esta y la de arriba al profe por dios
-            cr.where(cb.equal(root.get("name"), u));
+            cr.where(cb.equal(root, u));
             return session.createQuery(cr).getResultList();
         } catch (HibernateException hibernateException){
             System.err.println(hibernateException.getMessage());
@@ -167,8 +167,8 @@ public class UserImplDAO implements UserDAO {
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<LaboralExperience> cr = cb.createQuery(LaboralExperience.class);
             Root<LaboralExperience> root = cr.from(LaboralExperience.class);
-            Join<LaboralExperience, User> academicInfoUserJoin = root.join("laboralExperiences");//Preguntar esta y la de arriba al profe por dios
-            cr.where(cb.equal(root.get("name"), u));
+            Join<LaboralExperience, User> academicInfoUserJoin = root.join("laboralExperiences");//Hay que poner el nombre de la lista
+            cr.where(cb.equal(root, u));
             return session.createQuery(cr).getResultList();
         } catch (HibernateException hibernateException){
             System.err.println(hibernateException.getMessage());

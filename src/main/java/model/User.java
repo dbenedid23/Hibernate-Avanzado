@@ -50,6 +50,38 @@ public class User {
         this.mail = mail;
     }
 
+    public List<Skill> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(List<Skill> skills) {
+        this.skills = skills;
+    }
+
+    public List<AcademicInfo> getAcademicInfos() {
+        return academicInfos;
+    }
+
+    public void setAcademicInfos(List<AcademicInfo> academicInfos) {
+        this.academicInfos = academicInfos;
+    }
+
+    public List<Candidature> getCandidatures() {
+        return candidatures;
+    }
+
+    public void setCandidatures(List<Candidature> candidatures) {
+        this.candidatures = candidatures;
+    }
+
+    public List<LaboralExperience> getLaboralExperiences() {
+        return laboralExperiences;
+    }
+
+    public void setLaboralExperiences(List<LaboralExperience> laboralExperiences) {
+        this.laboralExperiences = laboralExperiences;
+    }
+
     public int getId() {
         return id;
     }

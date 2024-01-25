@@ -27,8 +27,7 @@ public class JobOffer {
     @ManyToOne
     @JoinColumn(name = "company_id")
     private Company company;
-    @ManyToOne
-    @JoinColumn(name = "candidature_id")
+    @OneToMany(mappedBy = "jobOffers")
     private Candidature candidature;
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
@@ -42,6 +41,30 @@ public class JobOffer {
 
     public int getWorkDayType() {
         return workDayType;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
+    public Candidature getCandidature() {
+        return candidature;
+    }
+
+    public void setCandidature(Candidature candidature) {
+        this.candidature = candidature;
+    }
+
+    public List<Skill> getSkill() {
+        return skill;
+    }
+
+    public void setSkill(List<Skill> skill) {
+        this.skill = skill;
     }
 
     public void setWorkDayType(int workDayType) {

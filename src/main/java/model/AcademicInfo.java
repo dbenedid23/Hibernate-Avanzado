@@ -35,6 +35,22 @@ public class AcademicInfo {
         this.meanScore = meanScore;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Institution getInstitution() {
+        return institution;
+    }
+
+    public void setInstitution(Institution institution) {
+        this.institution = institution;
+    }
+
     public int getId() {
         return id;
     }

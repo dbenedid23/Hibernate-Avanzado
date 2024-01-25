@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7712652-d249-4ebb-b96d-605fa1c926de" name="Changes" comment="Metodos En JobOfferImplDAO y UserImplDAO">
+    <list default="true" id="d7712652-d249-4ebb-b96d-605fa1c926de" name="Changes" comment="Metodos en CompanyService">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/JobOfferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/JobOfferService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserImplDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserImplDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/AcademicInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/AcademicInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Candidature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Candidature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Institution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Institution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/JobOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/JobOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/LaboralExperience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/LaboralExperience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706139348748</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Metodos en CompanyService">
+      <option name="closed" value="true" />
+      <created>1706142297875</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706142297875</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +209,7 @@
     <MESSAGE value="Cambio en nombres y nuevas relaciones" />
     <MESSAGE value="Metodos En CompanyDao" />
     <MESSAGE value="Metodos En JobOfferImplDAO y UserImplDAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Metodos En JobOfferImplDAO y UserImplDAO" />
+    <MESSAGE value="Metodos en CompanyService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Metodos en CompanyService" />
   </component>
 </project>
