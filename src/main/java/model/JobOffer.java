@@ -37,7 +37,7 @@ public class JobOffer {
             joinColumns = @JoinColumn(name = "JobOffer_id"),
             inverseJoinColumns = @JoinColumn(name = "skill_id")
     )
-    private List<Skill> skill;
+    private List<Skill> skill = new ArrayList<>();
     public JobOffer() {
     }
 

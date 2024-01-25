@@ -27,7 +27,7 @@ public class Skill {
             joinColumns = @JoinColumn(name = "skill_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id")
         )
-        private List<User> users;
+        private List<User> users = new ArrayList<>();
     @ManyToMany(mappedBy = "skill", fetch = FetchType.LAZY)
     private List<JobOffer> jobOffer = new ArrayList<>();
 

@@ -18,7 +18,7 @@ import java.util.List;
 @Table(name = "users")
 public class User {
     @ManyToMany(mappedBy = "users", fetch = FetchType.LAZY)
-    private List<Skill> skills;
+    private List<Skill> skills = new ArrayList<>();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -123,5 +123,14 @@ public class User {
         return nombre;
     }
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", description='" + description + '\'' +
+                ", telephone=" + telephone +
+                ", mail='" + mail + '\'' +
+                '}';
+    }
 }
