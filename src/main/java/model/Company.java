@@ -13,6 +13,8 @@ public class Company {
     private int id;
     @Column(name = "nombre", nullable = false, unique = true)
     private String name;
+    @Column(name = "contraseña")
+    private String password;
     @Column(name = "descripcion")
     private String description;
     @OneToMany (mappedBy = "company", cascade = CascadeType.ALL)
@@ -61,6 +63,14 @@ public class Company {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Company(String name, String description) {

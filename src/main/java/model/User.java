@@ -22,7 +22,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    
+    @Column(name = "Contraseña")
+    private String password;
     @Column(name = "nombre", nullable = false, unique = true)
     private String nombre;
 
@@ -121,6 +122,14 @@ public class User {
 
     public String getNombre() {
         return nombre;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
