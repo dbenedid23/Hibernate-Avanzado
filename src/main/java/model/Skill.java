@@ -62,14 +62,14 @@ public class Skill {
         this.nombre = nombre;
     }
 
-    public Skill() {
-    }
+
 
     public Skill(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }
 
-
-    
+    public Skill(String nombre) {
+        this.nombre = nombre;
+    }
 }

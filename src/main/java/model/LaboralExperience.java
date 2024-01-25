@@ -1,7 +1,8 @@
 package model;
 
 import jakarta.persistence.*;
-
+@Entity
+@Table(name = "LaboralExperiences")
 public class LaboralExperience {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,10 +19,10 @@ public class LaboralExperience {
     private int initDate;
     @Column(name = "FechaFin")
     private int endDate;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "company_id")
     private Company company;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "user_id")
     private User user;
 

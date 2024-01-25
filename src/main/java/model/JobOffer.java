@@ -3,7 +3,8 @@ package model;
 import jakarta.persistence.*;
 
 import java.util.List;
-
+@Entity
+@Table(name = "JobOffers")
 public class JobOffer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,11 +25,11 @@ public class JobOffer {
     private int minSalary;
     @Column(name = "diaDeTrabajo")
     private int workDayType;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "company_id")
     private Company company;
-    @OneToMany(mappedBy = "jobOffers")
-    private Candidature candidature;
+    @OneToMany(mappedBy = "jobOffers", cascade = CascadeType.ALL)
+    private List<Candidature> candidature;
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "JobOffer skill",
@@ -51,11 +52,11 @@ public class JobOffer {
         this.company = company;
     }
 
-    public Candidature getCandidature() {
+    public List<Candidature> getCandidature() {
         return candidature;
     }
 
-    public void setCandidature(Candidature candidature) {
+    public void setCandidature(List<Candidature> candidature) {
         this.candidature = candidature;
     }
 

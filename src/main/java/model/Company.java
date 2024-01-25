@@ -14,9 +14,9 @@ public class Company {
     private String name;
     @Column(name = "descripcion")
     private String description;
-    @OneToMany (mappedBy = "company")
+    @OneToMany (mappedBy = "company", cascade = CascadeType.ALL)
     private List<JobOffer>jobOffers;
-    @OneToMany (mappedBy = "company")
+    @OneToMany (mappedBy = "company", cascade = CascadeType.ALL)
     private List<LaboralExperience> laboralExperiences;
 
     public Company() {

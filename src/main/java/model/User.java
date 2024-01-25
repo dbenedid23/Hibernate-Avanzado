@@ -33,11 +33,11 @@ public class User {
 
     @Column(name = "e-mail", nullable = false)
     private String mail;
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<AcademicInfo> academicInfos;
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Candidature> candidatures;
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<LaboralExperience> laboralExperiences;
     public User() {
     }

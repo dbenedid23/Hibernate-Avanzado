@@ -18,10 +18,10 @@ public class AcademicInfo {
     private String current;
     @Column(name = "mean_score")
     private String meanScore;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "user_id")
     private User user;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "institution_id")
     private Institution institution;
 

@@ -27,38 +27,48 @@ public class UserService {
         user.getLaboralExperiences().add(lab);
         uid.updateUser(user);
     }
-    public void addSkill(User user, String name) {
-        user.getSkills();
-
-    }
-    public void printUserInfo(User user){
+    public void addSkill(User user, String nombre) {
+        Skill skii = new Skill(nombre);
+        user.getSkills().add(skii);
+        uid.updateUser(user);
 
     }
     public void addAcademicInfo(User user, AcademicInfo aca){
+        aca.setUser(user);
         user.getAcademicInfos().add(aca);
         uid.updateUser(user);
     }
     public void addCandidature(User user, Candidature ca, JobOffer job){
-
+        ca.setUser(user);
+        ca.setJobOffers(job);
+        user.getCandidatures().add(ca);
+        uid.updateUser(user);
     }
     public void addCandidature(User user, Candidature ca) {
-
+        ca.setUser(user);
+        user.getCandidatures().add(ca);
+        uid.updateUser(user);
     }
-    public void addSkill(User user, Skill skill){
+    public void addSkill(User user, Skill skill){//Preguntasion a profezo
         user.getSkills().add(skill);
         skill.getUsers().add(user);
         uid.updateUser(user);
     }
     public void addJobExperience(User user, LaboralExperience lab) {
-
+        lab.setUser(user);
+        user.getLaboralExperiences().add(lab);
+        uid.updateUser(user);
     }
     public void addAcademicInfo(User user, AcademicInfo aca, Institution ins) {
+        aca.setUser(user);
+        aca.setInstitution(ins);
+        user.getAcademicInfos().add(aca);
+        uid.updateUser(user);
+    }
+    public void addCandidature(User user, JobOffer job, String name, String nameCandidature) {//preguntar
 
     }
-    public void addCandidature(User user, JobOffer job, String name, String nameCandidature) {
-
-    }
-    public void addCandidature(User user, JobOffer job) {
+    public void addCandidature(User user, JobOffer job) {//preguntar
 
     }
     public void removeUser(User user){

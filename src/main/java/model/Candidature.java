@@ -19,12 +19,10 @@ public class Candidature {
     private int Status;
     @Column(name = "CoverLetter")
     private String coverLetterPath;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "user_id")
     private User user;
-
-
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "jobOffers_id")
     private JobOffer jobOffers;
 
