@@ -2,6 +2,8 @@ package model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "Candidature")
 public class Candidatures {
@@ -17,6 +19,11 @@ public class Candidatures {
     int Status;
     @Column(name = "CoverLetter")
     String coverLetterPath;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+    @OneToOne(mappedBy = "company")
+    List<JobOffer> jobOffers;
     public Candidatures() {
     }
 

@@ -11,7 +11,11 @@ public class Institutions {
     int id;
     @Column(name = "nombre" , nullable = false, unique = true)
     String name;
+    @OneToMany(mappedBy = "institution")
+    List<AcademicInfo> academicInfos;
+    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
 
+    private List<AcademicInfo> aca;
     public Institutions() {
     }
 
@@ -36,7 +40,5 @@ public class Institutions {
         this.name = name;
     }
 
-    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
 
-    private List<AcademicInfo> aca;
 }

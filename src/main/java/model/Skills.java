@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author dev
+ * @author devo
  */
 @Entity
 @Table(name = "skills")

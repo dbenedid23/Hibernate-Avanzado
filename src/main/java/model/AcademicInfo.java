@@ -22,6 +22,9 @@ public class AcademicInfo {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+    @ManyToOne
+    @JoinColumn(name = "institution_id")
+    private Institutions institution;
 
 
     public AcademicInfo(int id, String tittle, int initialDate, int endDate, String current, String meanScore) {

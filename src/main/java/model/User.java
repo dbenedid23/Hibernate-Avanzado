@@ -17,7 +17,7 @@ import java.util.List;
 @Table(name = "users")
 public class User {
     @ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
-
+    private List<Skills> skills;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -35,7 +35,10 @@ public class User {
     String mail;
     @OneToMany(mappedBy = "user")
     List<AcademicInfo> academicInfos;
-
+    @OneToMany(mappedBy = "user")
+    List<Candidatures> candidatures;
+    @OneToMany(mappedBy = "user")
+    List<LaboralExperiences> laboralExperiences;
     public User() {
     }
 
@@ -86,8 +89,6 @@ public class User {
     public String getNombre() {
         return nombre;
     }
-        private List<Skills> skills;
-        private List<Candidatures> ca;
-        private List<LaboralExperiences> lab;
-        private List<AcademicInfo> aca;
+
+
 }
