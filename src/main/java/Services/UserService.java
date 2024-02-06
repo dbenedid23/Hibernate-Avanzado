@@ -40,7 +40,7 @@ public class UserService {
 
     }
     public void addAcademicInfo(User user, AcademicInfo aca){
-        System.out.println(user);
+        //System.out.println(user);
 
         aca.setUser(user);
         user.getAcademicInfos().add(aca);

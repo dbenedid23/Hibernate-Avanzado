@@ -59,7 +59,7 @@ public class UserImplDAO implements UserDAO {
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<AcademicInfo> cr = cb.createQuery(AcademicInfo.class);
             Root<AcademicInfo> root = cr.from(AcademicInfo.class);
-            Join<AcademicInfo, User> academicInfoUserJoin = root.join("user");
+            Join<AcademicInfo, User> academicInfoUserJoin = root.join("academicInfos");
             cr.where(cb.equal(root, u));
             return session.createQuery(cr).getResultList();
         } catch (HibernateException hibernateException){
@@ -106,7 +106,7 @@ public class UserImplDAO implements UserDAO {
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<Skill> cr = cb.createQuery(Skill.class);
             Root<Skill> root = cr.from(Skill.class);
-            Join<Skill, User> academicInfoUserJoin = root.join("users");
+            Join<Skill, User> academicInfoUserJoin = root.join("skills");
             cr.where(cb.equal(root, u));
             return session.createQuery(cr).getResultList();
         } catch (HibernateException hibernateException){

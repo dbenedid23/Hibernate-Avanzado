@@ -64,7 +64,7 @@ public class CompanyImplDAO implements CompanyDAO{
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<JobOffer> cr = cb.createQuery(JobOffer.class);
             Root<JobOffer> root = cr.from(JobOffer.class);
-            Join<JobOffer, Company> jobOfferJoin = root.join("company");
+            Join<JobOffer, Company> jobOfferJoin = root.join("jobOffers");
             cr.where(cb.equal(root, co));
             return session.createQuery(cr).getResultList();
         } catch (HibernateException hibernateException){

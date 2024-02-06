@@ -21,7 +21,7 @@ public class Skill {
     private int id;
     @Column(name = "nombre", nullable = false)
     private String nombre;
-        @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+        @ManyToMany(cascade = {CascadeType.ALL, CascadeType.MERGE})
         @JoinTable(
             name = "Skill users",
             joinColumns = @JoinColumn(name = "skill_id"),

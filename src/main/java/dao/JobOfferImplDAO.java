@@ -99,7 +99,7 @@ public class JobOfferImplDAO implements JobOfferDAO{
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<Candidature> cr = cb.createQuery(Candidature.class);
             Root<Candidature> root = cr.from(Candidature.class);
-            Join<Candidature, JobOffer> jobOfferJoin = root.join("candidatures");
+            Join<Candidature, JobOffer> jobOfferJoin = root.join("candidature");
             cr.where(cb.equal(root, jo));
             return session.createQuery(cr).getResultList();
         } catch (HibernateException hibernateException){
@@ -186,7 +186,7 @@ public class JobOfferImplDAO implements JobOfferDAO{
             CriteriaBuilder cb = session.getCriteriaBuilder();
             CriteriaQuery<JobOffer> cr = cb.createQuery(JobOffer.class);
             Root<JobOffer> root = cr.from(JobOffer.class);
-            Join<JobOffer, Company> jobOfferSkillJoin = root.join("company");
+            Join<JobOffer, Company> jobOfferSkillJoin = root.join("jobOffers");
             cr.where(cb.equal(root, co));
             return session.createQuery(cr).getResultList();
         } catch (HibernateException hibernateException){
